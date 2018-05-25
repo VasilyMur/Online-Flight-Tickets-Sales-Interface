@@ -1,0 +1,72 @@
+.ticket__container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border: 1px solid #000;
+    margin-bottom: 2rem;
+    background: #fff;
+    &--price {
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+        align-content: center;
+        grid-gap: 2rem;
+        padding: 2rem;
+        .logo {
+            border: 1px solid #000;
+        }
+        .price {
+            a {
+                display: flex;
+                flex-direction: column;
+                background: #ff6d00;
+                color: #fff;
+                text-decoration: none;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                box-shadow: 0 1px 0 0 #d64d08,0 2px 1px 0 rgba(0,0,0,.1);
+            }
+        }
+    }
+    &--details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem;
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .details__depart {
+            text-align: left;
+        }
+
+        .details__arrive {
+            text-align: right;
+        }
+
+        .city {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .time {
+            font-size: 30px;
+        }
+        .date {
+            font-size: 1.4rem;
+            color: #888;
+        }
+        .stops {
+            font-size: 1.4rem;
+            color: #888;
+            border-bottom: 1px solid #888;
+            padding-bottom: 5px;
+        }
+    }
+
+
+
+
+
+
+
+}
