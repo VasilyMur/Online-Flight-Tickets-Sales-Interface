@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Currency extends React.Component {
 
  
@@ -13,7 +14,7 @@ class Currency extends React.Component {
         const { label } = this.props;
 
         return (
-            <a href="" onClick={this.changeCurrency}>{label}</a>
+                <a href="" onClick={this.changeCurrency}>{label}</a>
         )
     }
 

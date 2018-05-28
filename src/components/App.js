@@ -8,7 +8,6 @@ import axios from 'axios';
 
 
 import flightData from '../flights';
-//import uuidv1 from 'uuid/v1';
 
 
 
@@ -63,7 +62,7 @@ class App extends React.Component {
         destination_name: flight.destination_name, 
         origin: flight.origin,
         origin_name: flight.origin_name, 
-        price: flight.price / this.state.currency, 
+        price: flight.price, 
         stops: flight.stops,
       }
 
@@ -78,10 +77,10 @@ currencyToggle = async (type) => {
   const eur = rates.data.rates.RUB;
   const usd = rates.data.rates.RUB / rates.data.rates.USD;
   this.setState({ currency: type === "USD" ? usd : 1  });
-  this.original()
-
 
 }
+
+
 
 
   trackSet = async (set) => {

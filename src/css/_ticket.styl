@@ -1,18 +1,22 @@
 .ticket__container {
     display: grid;
     grid-template-columns: 200px 1fr;
-    border: 1px solid #000;
     margin-bottom: 2rem;
     background: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.15);
     &--price {
         display: grid;
         grid-template-rows: auto;
         align-items: center;
         align-content: center;
-        grid-gap: 2rem;
         padding: 2rem;
+        border-right: 1px solid #e4e7e8;
         .logo {
-            border: 1px solid #000;
+            max-width: 120px;
+            margin: 0 auto;
+            img {
+                max-width: 100%;
+            }
         }
         .price {
             a {
@@ -21,7 +25,7 @@
                 background: #ff6d00;
                 color: #fff;
                 text-decoration: none;
-                padding: 1rem 2rem;
+                padding: 0.5rem 2rem;
                 border-radius: 4px;
                 box-shadow: 0 1px 0 0 #d64d08,0 2px 1px 0 rgba(0,0,0,.1);
             }
@@ -30,7 +34,7 @@
     &--details {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        padding: 2rem;
+        padding: 2.5rem;
         .detail-item {
             display: flex;
             flex-direction: column;
@@ -39,7 +43,19 @@
         .details__depart {
             text-align: left;
         }
-
+        .details__direction {
+            &--stops {
+                display: grid;
+                grid-template-columns: 90% 10%;
+                position: relative;
+            }
+            img {
+                max-width: 10px;
+                position: absolute;
+                bottom: -4px;
+                right: 0;
+            }
+        }
         .details__arrive {
             text-align: right;
         }
@@ -47,18 +63,19 @@
         .city {
             font-weight: bold;
             font-size: 1.4rem;
+             color: #8b9497;
         }
         .time {
-            font-size: 30px;
+            font-size: 3rem;
         }
         .date {
             font-size: 1.4rem;
-            color: #888;
+            color: #8b9497;
         }
         .stops {
             font-size: 1.4rem;
-            color: #888;
-            border-bottom: 1px solid #888;
+            color: #a9b4b9;
+            border-bottom: 1px solid #a9b4b9;
             padding-bottom: 5px;
         }
     }

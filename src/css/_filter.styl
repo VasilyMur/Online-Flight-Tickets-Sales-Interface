@@ -1,6 +1,44 @@
 .filter__container {
-    &--currency {
-        display: flex;
-        flex-direction: column;
+    &--currency a:last-child {
+        border-left: 1px solid #2196f3;
     }
+
+    &--currency {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        max-width: 150px;
+        margin: 0 auto 1.5rem;
+        border: 1px solid #2196f3;
+        a {
+            padding: 10px;
+            text-decoration: none;
+            background: rgba(255,255,255, 1);
+            color: #2196f3;
+
+            transition: all 0.2s;
+        }
+        a:focus{
+            outline: none;
+        }
+        a:hover{
+            background: rgba(33,150,243, 0.1);
+            color: #2196f3;
+        }
+
+
+    }
+    &--stops {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        label {
+            text-align: left;
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+
+
 }
