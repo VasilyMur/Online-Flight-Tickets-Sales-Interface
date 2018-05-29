@@ -17,6 +17,10 @@ const currency = [
 
 class Filter extends React.Component {
 
+    state = {
+        selectedItem: null
+    }
+
     componentWillMount = () => {
         this.selectedCheckboxes = new Set();
       }
@@ -30,7 +34,9 @@ class Filter extends React.Component {
         this.props.trackSet(this.selectedCheckboxes)
       }
 
-
+    clickHandler = (selected) => {
+        this.setState({ selectedItem: selected })
+      }
 
     render() {
 
@@ -40,12 +46,15 @@ class Filter extends React.Component {
                 <h2>Choose Your Currency</h2>
                 <div className="filter__container--currency">
 
-                    { currency.map(cur => {
+                    { currency.map((current) => {
+                        const selectedItem = this.state.selectedItem;
                         return (
                             <Currency
                                 currencyToggle={this.props.currencyToggle}
-                                label={cur}
-                                key={cur}
+                                label={current}
+                                key={current}
+                                onClick={this.clickHandler}
+                                isSelected={selectedItem === current}
                             />
                         )
                     }) }

@@ -24,7 +24,7 @@ class Ticket extends React.Component {
             <div className="ticket__container">
                 <div className="ticket__container--price">
                     <div className="logo">
-                        <img src='/klm.png' alt=""/>
+                        <img src={flight.carrier === "KLM" ? '/klm.png' : '/aeroflot.png'} alt=""/>
                     </div>
                     <div className="price">
                         <a href="">

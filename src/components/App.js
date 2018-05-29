@@ -47,7 +47,6 @@ class App extends React.Component {
   }
 
   original = () => {
-    console.log('hello0000')
     const allFlights = flightData.tickets.sort((a, b) => {
       return a.price > b.price ? 1 : -1;
     }).map(flight => {
@@ -163,7 +162,6 @@ currencyToggle = async (type) => {
       }
 
       if(set.size === 0) {
-        console.log('set size: 0')
         filterFlightsThree(null, null, null);
       }
   
